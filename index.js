@@ -12,11 +12,22 @@ const tutorials = [
   'what is JSONP?'
 ];
 const titleCased = () => {
-  //take each word as an array
-  let wordsArr = tutorials.split()
-  return console.log(wordsArr)
-  //make each charat(0).toUpperCase
-  // return it together
+  let newArray = tutorials.map(function(element){
+    //split the current element of the array into words
+    element = element.split(" ");
+    //iterate through the new array of words
+    let newWords = [];
+    element.forEach(function(word) {
+      word = word[0].toUpperCase() + word.slice(1);
+      newWords.push(word);
+    })
+    console.log("New array: ", newWords);
+    //for each word, make the first letter capital
+    //join it back togeteher into a string
+    return newWords.join(" ");
+  });
+    //return new array
+    return newArray;
 }
 
 

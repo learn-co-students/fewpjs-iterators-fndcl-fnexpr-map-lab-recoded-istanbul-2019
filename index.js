@@ -1,3 +1,35 @@
+// let students = ["harry", "ron", "hermione", "ginevra"];
+// let rollCall = [];
+ 
+for (const student of students) {
+  rollCall.push( student + " the wizard" );
+}
+// function studentRollCall(student) {
+//   return student + " the wizard";
+// }
+ 
+let rollCall = students.map(studentRollCall);
+let students = ["harry", "ron", "hermione", "ginevra"];
+let rollCall = students.map(function(student) {
+  return student + " the wizard";
+});
+const robots = [
+  { name: 'Johnny 5', modes: 5, isActivated: false, },
+  { name: 'C3PO', modes: 3, isActivated: false, },
+  { name: 'Sonny', modes: 2.5, isActivated: false, },
+  { name: 'Baymax', modes: 1.5, isActivated: false, },
+];
+ 
+const activatedRobots = robots.map(function (robot) {
+  return Object.assign({}, robot, {
+    modes: robot.modes * 2,
+    isActivated: true,
+  });
+});
+ 
+console.log(activatedRobots);
+ 
+
 const tutorials = [
   'what does the this keyword mean?',
   'What is the Contutorialuctor OO pattern?',

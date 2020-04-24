@@ -19,7 +19,7 @@ const titleCased = () => {
       word = word[0].toUpperCase() + word.slice(1);
       newWord.push(word);
     })
-    console.log("New array: ", newWord);
+   //console.log("New array: ", newWord);
     return newWord.join(" ");
   });
     return newArray;
